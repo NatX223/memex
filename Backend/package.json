@@ -22,7 +22,8 @@
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.1",
-    "viem": "^2.21.49"
+    "viem": "^2.21.49",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",

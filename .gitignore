@@ -1,3 +1,5 @@
 # Ignore node_modules and .env
 node_modules/
 .env
+Smart-Contracts/ignition/modules/Lock.js
+Smart-Contracts/contracts/Lock.sol
