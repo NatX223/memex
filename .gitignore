@@ -1,7 +1,14 @@
 # Ignore node_modules and .env
 node_modules/
 .next/
-Frontend/
+.vercel/
+config/
+utils/
+Frontend/app/create
+Frontend/app/merchant
+Frontend/app/stats
+Frontend/app/user
+Frontend/app/loans
 .env
 Smart-Contracts/ignition/modules/Lock.js
 Smart-Contracts/contracts/Lock.sol
