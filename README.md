@@ -7,6 +7,7 @@ live link -
 
 -   [Problem Statement](#Problem-statement)
 -   [Solution](#Solution)
+-   [How to run](#How-to-run)
 -   [How it works](#How-it-works)
 -   [Technologies Used](#technologies-used)
     -   [Smart Contract](#Solidity-smart-contracts)
@@ -34,6 +35,63 @@ newly created tokens. Essentially, this AI agent acts as a fully automated token
 into real-time social trends without the need for technical expertise or manual intervention, empowering them to quickly capitalize on 
 trending events and personalities in the fast-paced world of meme tokens and decentralized finance (DeFi).
 
+> ## How-to-run
+
+    clone this repository
+    ```bash
+    git clone https://github.com/NatX223/memex
+    ```
+
+    enter the Backend directory
+    ```bash
+    cd Backend
+    ```
+
+    add these in the .env file
+    ```
+    XAI_API_KEY=xai-HhyX6bpI0KhrEEk1mlX3EFavKkFRxAEioEG4WRnOUdS2E6J95GSwW2k5k94PQBYQB7NakO4BuoNxunrm
+    WALLET_PRIVATE_KEY=your private key
+    RPC_PROVIDER_URL=https://mainnet.mode.network
+    CROSSMINT_STAGING_API_KEY=sk_staging_6BFQExFJAmFvFCRpG3jSEDQKec5w7dJN4HvDSyXU7AzjtCVd8jEQnSpqd5LvTpa72LgTDkMovkensk9PC7Zk27HP2eBWTQEBbkqTfbyYW9HNowiadh1G4wm9tpJNSvkpvHhqtDQVuJhTdVRHE2VExPU8b22Bzm7PABsbfGv8R1pdPSogSctnyV5LeCEHdgbx24ADVUizh1WPtwU1D2rjxx87
+    SIGNER_WALLET_SECRET_KEY=0x1948be654292edaf4b77904b1b7f26a3d95eaa0abffe81a86384599b36d8f7e9
+    SIGNER_WALLET_ADDRESS=0x0CF7D32B9CeF506fF7C6E7A6A88c24024F3aF23c
+    SMART_WALLET_ADDRESS=0x9451cD01Ea75AA1627b1eCdd9733B324aCee6826
+    PORT=3300
+    ```
+
+    install neccesary packages
+    ```bash
+    npm install
+    ```
+
+    include the custom token launcher plugin by unzipping the plugin-token-launcher.zip file and place it in the node_modules/
+    @goat-sdk folder
+
+    start development server
+    ```bash
+    npm run start
+    ```
+
+    navigate to the Frontend folder
+    ```bash
+    cd ..
+    cd Frontend
+    ```
+
+    start development server
+    ```bash
+    npm run dev
+    ```    
+
+    view in the browser
+    http://localhost:3000
+
+    Click on the chat button on the top right corner
+    Enter a prompt to deploy a token
+    Click on send button
+    Prompt for contract address
+    View on Explorer
+    
 > ## How-it-works
 
 1. **Frontend Interface**:  
