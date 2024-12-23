@@ -13,7 +13,7 @@ require("dotenv").config();
 
 const apiKey = process.env.CROSSMINT_STAGING_API_KEY || '';
 const walletSignerSecretKey = process.env.SIGNER_WALLET_SECRET_KEY || '';
-const alchemyApiKey = process.env.ALCHEMY_API_KEY_BASE_SEPOLIA || '';
+const provider = process.env.RPC_PROVIDER_URL || '';
 const smartWalletAddress = process.env.SMART_WALLET_ADDRESS || '';
 
 const { smartwallet, faucet } = crossmint(apiKey || '');
@@ -39,8 +39,8 @@ app.post("/chat", async (req, res) => {
             signer: {
                 secretKey: walletSignerSecretKey as `0x${string}`,
             },
-            chain: "base-sepolia",
-            provider: alchemyApiKey,
+            chain: "mode",
+            provider: provider,
         }),
         plugins: [sendETH(), erc20({ tokens: [USDC] })],
     });
@@ -64,8 +64,8 @@ app.listen(PORT, async () => {
             signer: {
                 secretKey: walletSignerSecretKey as `0x${string}`,
             },
-            chain: "base-sepolia",
-            provider: alchemyApiKey,
+            chain: "mode",
+            provider: provider,
         }),
         plugins: [sendETH(), erc20({ tokens: [USDC] }), faucet()],
     });

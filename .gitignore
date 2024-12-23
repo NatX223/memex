@@ -1,5 +1,8 @@
 # Ignore node_modules and .env
 node_modules/
+.next/
+Frontend/
 .env
 Smart-Contracts/ignition/modules/Lock.js
 Smart-Contracts/contracts/Lock.sol
+README.md
