@@ -4,7 +4,7 @@ import { generateText } from "ai";
 import { http } from "viem";
 import { createWalletClient } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
-import { sepolia, modeTestnet } from "viem/chains";
+import { sepolia, modeTestnet, mode } from "viem/chains";
 
 import { getOnChainTools } from "@goat-sdk/adapter-vercel-ai";
 import { PEPE, USDC, erc20 } from "@goat-sdk/plugin-erc20";
@@ -20,7 +20,7 @@ const account = privateKeyToAccount(process.env.WALLET_PRIVATE_KEY as `0x${strin
 const walletClient = createWalletClient({
     account: account,
     transport: http(process.env.RPC_PROVIDER_URL),
-    chain: modeTestnet,
+    chain: mode,
 });
 
 (async () => {
@@ -32,17 +32,9 @@ const walletClient = createWalletClient({
     const result = await generateText({
         model: xai("grok-2-1212"),
         tools: tools,
-        maxSteps: 10,
-        prompt: "deploy a token with name 'pepemax', use the abbreviation of the name as the symbol",
+        maxSteps: 5,
+        prompt: "what is the latest token address?",
     });
 
     console.log(result.text);
 })();
-
-// set meta(topic type)
-// set duration() (?)
-// create meme
-// create name
-// deploy
-// create liq pool
-// provide liquidity
